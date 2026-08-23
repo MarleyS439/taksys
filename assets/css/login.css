@@ -1,34 +1,23 @@
 @import url('default.css');
 
 /*Estilos para telas até 480px de largura*/
-@media screen and (max-width: 480px) {}
-
-/*Estilos para telas mínimas de 481px até 767px de largura*/
-@media screen and (min-width: 481px) and (max-width: 767px) {}
-
-/*Estilos para telas mínimas de 768px até 1023px*/
-@media screen and (min-width: 768px) and (max-width: 1023px) {}
-
-/*Estilos para telas mínimas de 1024px*/
-@media screen and (min-width: 1024px) {
-
+@media screen and (max-width: 480px) {
     body {
-        background-image: url("../images/pexels-roman-odintsov-8355744.avif");
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-color: var(--color-white);
         height: 100vh;
         width: 100vw;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .login-container {
         background-color: var(--color-white);
-        padding: 5% 2%;
+        padding: 5%;
         margin: 5% 0;
         border-radius: 16px;
-        width: 30vw;
+        width: 80vw;
+        height: fit-content;
     }
 
     .login-container form {
@@ -56,7 +45,251 @@
         border: none;
         width: 100%;
         background-color: var(--color-inputs);
+    }
 
+    .inputs .input input:focus {
+        outline: none;
+    }
+
+    .inputs .input .wrap:has(input:focus) {
+        outline: 1px solid var(--color-accent);
+    }
+
+    .btn-login {
+        width: 100%;
+    }
+
+    .btn-login button {
+        border: 1px solid var(--color-accent);
+        background-color: var(--color-accent);
+        width: 100%;
+        padding: 8px;
+        border-radius: 16px;
+        font-weight: bold;
+        transition: 180ms ease-in-out;
+    }
+
+    .btn-login button:hover {
+        background-color: #ffd230;
+    }
+
+    #messages {
+        color: var(--color-red-text);
+        margin: 5% 0;
+    }
+}
+
+/*Estilos para telas mínimas de 481px até 767px de largura*/
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    body {
+        background-image: url("../images/pexels-roman-odintsov-8355744.avif");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-container {
+        background-color: var(--color-white);
+        padding: 5% 2%;
+        margin: 5%;
+        border-radius: 16px;
+        width: 55vw;
+        height: fit-content;
+    }
+
+    .login-container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputs {
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    .inputs .input .wrap {
+        background-color: var(--color-inputs);
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        border-radius: 16px;
+        margin: 5% 0;
+    }
+
+    .inputs .input input {
+        margin-left: 5px;
+        border: none;
+        width: 100%;
+        background-color: var(--color-inputs);
+    }
+
+    .inputs .input input:focus {
+        outline: none;
+    }
+
+    .inputs .input .wrap:has(input:focus) {
+        outline: 1px solid var(--color-accent);
+    }
+
+    .btn-login {
+        width: 100%;
+    }
+
+    .btn-login button {
+        border: 1px solid var(--color-accent);
+        background-color: var(--color-accent);
+        width: 100%;
+        padding: 8px;
+        border-radius: 16px;
+        font-weight: bold;
+        transition: 180ms ease-in-out;
+    }
+
+    .btn-login button:hover {
+        background-color: #ffd230;
+    }
+
+    #messages {
+        color: var(--color-red-text);
+        margin: 5% 0;
+    }
+}
+
+/*Estilos para telas mínimas de 768px até 1023px*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        background-image: url("../images/pexels-roman-odintsov-8355744.avif");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-container {
+        background-color: var(--color-white);
+        padding: 5% 2%;
+        margin: 5%;
+        border-radius: 16px;
+        width: 45vw;
+    }
+
+    .login-container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputs {
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    .inputs .input .wrap {
+        background-color: var(--color-inputs);
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        border-radius: 16px;
+        margin: 5% 0;
+    }
+
+    .inputs .input input {
+        margin-left: 5px;
+        border: none;
+        width: 100%;
+        background-color: var(--color-inputs);
+    }
+
+    .inputs .input input:focus {
+        outline: none;
+    }
+
+    .inputs .input .wrap:has(input:focus) {
+        outline: 1px solid var(--color-accent);
+    }
+
+    .btn-login {
+        width: 100%;
+    }
+
+    .btn-login button {
+        border: 1px solid var(--color-accent);
+        background-color: var(--color-accent);
+        width: 100%;
+        padding: 8px;
+        border-radius: 16px;
+        font-weight: bold;
+        transition: 180ms ease-in-out;
+    }
+
+    .btn-login button:hover {
+        background-color: #ffd230;
+    }
+
+    #messages {
+        color: var(--color-red-text);
+        margin: 5% 0;
+    }
+}
+
+/*Estilos para telas mínimas de 1024px*/
+@media screen and (min-width: 1024px) {
+
+    body {
+        background-image: url("../images/pexels-roman-odintsov-8355744.avif");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-container {
+        background-color: var(--color-white);
+        padding: 5% 2%;
+        margin: 5%;
+        border-radius: 16px;
+        width: 35vw;
+    }
+
+    .login-container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputs {
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    .inputs .input .wrap {
+        background-color: var(--color-inputs);
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        border-radius: 16px;
+        margin: 5% 0;
+    }
+
+    .inputs .input input {
+        margin-left: 5px;
+        border: none;
+        width: 100%;
+        background-color: var(--color-inputs);
     }
 
     .inputs .input input:focus {
