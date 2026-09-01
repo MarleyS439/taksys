@@ -1,0 +1,377 @@
+@import url('default.css');
+
+/*Estilos para telas até 480px de largura*/
+@media screen and (max-width: 480px) {}
+
+/*Estilos para telas mínimas de 481px até 767px de largura*/
+@media screen and (min-width: 481px) and (max-width: 767px) {}
+
+/*Estilos para telas mínimas de 768px até 1023px*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {}
+
+/*Estilos para telas mínimas de 1024px*/
+@media screen and (min-width: 1024px) {
+
+    body {
+        padding: 2%;
+        background-color: var(--color-light-green);
+    }
+
+    .container {
+        background-color: var(--color-white);
+        border-radius: 25px;
+        height: 70vh;
+    }
+
+    .topo {
+        padding: 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .topo .logo svg {
+        width: 150px;
+        height: auto;
+    }
+
+    .topo .adicionar button {
+        display: flex;
+        align-items: center;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        background-color: #B3E8C1;
+        transition: 180ms ease-in-out;
+    }
+
+    .topo .adicionar button:active {
+        transform: scale(1.1, 1.1);
+    }
+
+    .topo .adicionar button span {
+        margin-left: 5px;
+        color: var(--color-dark);
+        font-size: 1rem;
+    }
+
+    .conteudo {
+        background-color: var(--color-white);
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 2%;
+        border-radius: 25px;
+    }
+
+
+    .lista-lateral ul {
+        padding: 2% 5%;
+    }
+
+    .menu-btn {
+        position: relative;
+    }
+
+    .menu-btn .submenu {
+        position: absolute;
+        display: flex;
+        top: 25px;
+    }
+
+    .menu-btn .submenu>div {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid red;
+    }
+
+    .menu-btn .submenu>div button {
+        padding: 5px;
+        color: #383838;
+        font-weight: bold;
+        background-color: var(--color-white);
+        border: none;
+    }
+
+    .lista-lateral ul li {
+        list-style: none;
+        margin: 5% 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 12px;
+    }
+
+    .lista-lateral ul li .item {
+        display: flex;
+        align-items: center;
+    }
+
+    .lista-lateral ul li .item .cor {
+        margin-right: 5px;
+        border: none;
+        border-radius: 100px;
+        background: transparent;
+        width: 50px;
+        height: 50px;
+    }
+
+    .lista-lateral ul li .item .cor {
+        margin-right: 5px;
+        border: none;
+        border-radius: 100px;
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        padding: 0;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    .lista-lateral ul li .item .cor::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+
+    .lista-lateral ul li .item .cor::-webkit-color-swatch {
+        border: none;
+        border-radius: 100px;
+    }
+
+    .lista-lateral ul li .item .cor::-moz-focus-inner {
+        border: none;
+        padding: 0;
+    }
+
+    .cartoes .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: inherit;
+        height: 70vh;
+        padding: 10px 30px 10px 5px;
+        overflow-y: auto;
+        gap: 20px;
+        margin-right: 18px;
+    }
+
+    .cartoes .card {
+        background-color: var(--color-light-yellow);
+        padding: 2% 3%;
+        border-radius: 25px;
+        box-shadow: 0px 0px 5px #00000060;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: min-content;
+        position: relative;
+    }
+
+    .cartoes .card .titulo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cartoes .card .titulo span {
+        color: var(--color-dark);
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .cartoes .card .titulo button {
+        color: var(--color-dark);
+        background-color: transparent;
+        border: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 180ms ease-in-out;
+        border-radius: 5px;
+        z-index: 10;
+    }
+
+    .cartoes .card .titulo button:hover {
+        border: 1px solid var(--color-dark);
+    }
+
+    .cartoes .card .titulo button:active {
+        transform: scale(1.1, 1.1);
+    }
+
+    .cartoes .card .conteudo-card {
+        margin-top: 2%;
+    }
+
+    .cartoes .card .outros {
+        display: flex;
+        margin-top: 2%;
+        justify-content: space-between;
+    }
+
+    .cartoes .card .opts {
+        position: absolute;
+        top: 45px;
+        right: 15px;
+        background-color: var(--color-white);
+        padding: 15px 10px;
+        width: 150px;
+        display: none;
+        z-index: 9;
+        flex-direction: column;
+        height: fit-content;
+        border-radius: 25px;
+        box-shadow: 0 0 5px #00000060;
+    }
+
+    .cartoes .card .opts button {
+        border: none;
+        padding: 5px;
+        margin: 10px 0;
+        background-color: var(--color-white);
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .cartoes .card .opts button:hover {
+        font-weight: bold;
+    }
+
+
+    .cartoes .card .opts button:nth-child(2) {
+        color: #FF6366;
+    }
+
+    .cartoes .card .outros .colors .lista {
+        display: flex;
+    }
+
+    .cartoes .card .outros .colors .lista>div {
+        margin-right: 5px;
+    }
+
+    .cartoes .card .outros .check {
+        margin-top: 10px;
+    }
+
+    .modal-item {
+        margin: 4% 0 4% 30%;
+        width: 41%;
+        border-radius: 25px;
+        height: 80vh;
+        border: none;
+        padding: 2%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .modal-item .modal-body .title {
+        margin-top: 2%;
+    }
+
+    .modal-item .modal-body .item {
+        margin: 2% 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-item .modal-body .item input {
+        padding: 10px 5px;
+        border-radius: 25px;
+        border: none;
+        background-color: #e8e8e8;
+    }
+
+    .modal-item .modal-body .item input:focus {
+        outline: 1px solid var(--color-dark);
+    }
+
+    .modal-item .modal-body .item textarea {
+        background-color: var(--color-light-yellow);
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+        padding: 15px;
+        color: #393939;
+        resize: none;
+        height: 25vh;
+    }
+
+    .modal-item .modal-body .col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .modal-item .modal-body .col>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-item .modal-body .col>div input,
+    select {
+        padding: 10px 15px;
+        border-radius: 25px;
+        border: none;
+        width: 100%;
+        margin-right: 5px;
+    }
+
+    .modal-item .modal-body .col>div input[type="date"] {
+        background-color: #e8e8e8;
+    }
+
+    .item .text {
+        height: 80%;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .modal-item .buttons {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .modal-item .buttons button {
+        background-color: transparent;
+        padding: 10px;
+        width: 150px;
+        margin: 0 5px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        border-radius: 50px;
+        font-weight: bold;
+    }
+
+    .modal-item .buttons button:nth-child(1) {
+        color: #FF6366;
+    }
+
+    .modal-item .buttons button:nth-child(1):hover {
+        border: 1px solid #FF6366;
+    }
+
+    .modal-item .buttons button:nth-child(2) {
+        color: #383838;
+        background-color: #B3E8C1;
+    }
+
+    .modal-item .buttons button:nth-child(2):hover {
+        background-color: #b3e8c1c8;
+    }
+
+    #item-1 {
+        background-color: #7D87FF;
+        height: 25px;
+        width: 25px;
+        border-radius: 50px;
+    }
+
+    .opts {
+        display: none;
+    }
+}
